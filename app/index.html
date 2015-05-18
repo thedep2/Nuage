@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html class="no-js" lang="fr">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 <title>La Cartographie des Nuages</title>
 <link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-<!-- <link rel="stylesheet" -->
-<!-- 	href="bower_components/bootstrap/dist/css/bootstrap.css"> -->
+<link rel="stylesheet" href="styles/normalize.css">
+<script src="scripts/vendor/modernizr-2.8.3.min.js"></script>
+
+<link rel="stylesheet"
+	href="bower_components/bootstrap/css/bootstrap.css">
 <link rel="stylesheet" href="styles/app.css">
 <link href='http://fonts.googleapis.com/css?family=Satisfy'
 	rel='stylesheet' type='text/css'>
@@ -26,10 +35,19 @@
 
 </head>
 <body>
-	<div id="bloc_page">
-		<header id="banniere">
-			<h1 id="titre_principal">La Cartographie des Nuages</h1>
-			<nav id="nav_principal">
+
+
+	<div id="bloc_page" class="container-fluid">
+
+		<!-- HEADER -->
+
+		<header id="banniere" class="row">
+			<!-- Titre principal -->
+			<h1 id="titre_principal" class="col-md-6">La Cartographie des
+				Nuages</h1>
+
+			<!-- Menu banniere -->
+			<nav id="nav_principal" class="col-md-6">
 				<ul>
 					<li><a href="index.html">Accueil</a></li>
 					<li><a href="index.html">Portfolio</a></li>
@@ -41,61 +59,111 @@
 			</nav>
 		</header>
 
-		<section>
-			<article id="carousselle">
-				<div id="carousselle_article">
-					<nav>
-						<ul>
-							<li><a href="index.html"><img class="img_vignette_carousselle" alt="Chili 2015" src="images/4-DSC_8555_DxO_4.jpg" /></a></li>
-							<li><a href="index.html"><img class="img_vignette_carousselle" alt="Urbex" src="images/3-DSC_6307_DxO_3.jpg" /></a></li>
-							<li><a href="index.html"><img class="img_vignette_carousselle" alt="Plongeoir" src="images/2-DSC_5723_DxO.jpg" /></a></li>
-							<li><a href="index.html"><img class="img_vignette_carousselle" alt="Lisboa" src="images/1-DSC_5675_DxO.jpg" /></a></li>
-						</ul>
-					</nav>
-				</div>
-			</article>
 
-			<article id="article_accueil">
-				<p id="presentation_phrase">Bienvenue sur <span class="nom_site">La Cartographie des Nuages</span>.</p>
-				<nav>
-					<ul>
-						<li><div class="image_menu"><a href="index.html"><img class="img_article_accueil" alt="Portfolio" src="images/4-DSC_8555_DxO_4.jpg" />Portfolio</a></div></li>
-						<li><div class="image_menu"><a href="index.html"><img class="img_article_accueil" alt="Astro" src="images/4-DSC_8555_DxO_4.jpg" />Astro</a></div></li>
-						<li><div class="image_menu"><a href="index.html"><img class="img_article_accueil" alt="Vidéos" src="images/4-DSC_8555_DxO_4.jpg" />Vidéos</a></div></li>
-						<li><div class="image_menu"><a href="index.html"><img class="img_article_accueil" alt="Voyages" src="images/4-DSC_8555_DxO_4.jpg" />Voyages</a></div></li>
-						<li><div class="image_menu"><a href="index.html"><img class="img_article_accueil" alt="Galeries" src="images/4-DSC_8555_DxO_4.jpg" />Galeries</a></div></li> 
-					</ul>
+
+		<!-- Actualites -->
+
+		<article id="actu" class="row">
+			<div id="actu_article" class="col-sm-12">
+				<nav class="row" id="actu_nav">
+					<div
+						class="actu_div col-sm-offset-1 col-sm-1 col-xs-offset-1 col-xs-4">
+						<a href="index.html"><img class="img_vignette_actu img-circle"
+							alt="Chili 2015" src="images/4-DSC_8555_DxO_4.jpg" /></a>
+					</div>
+
+					<div
+						class="actu_div col-sm-offset-2 col-sm-1 col-xs-offset-2 col-xs-4">
+						<a href="index.html"><img class="img_vignette_actu img-circle"
+							alt="Urbex" src="images/3-DSC_6307_DxO_3.jpg" /></a>
+					</div>
+
+					<div
+						class="actu_div col-sm-offset-2 col-sm-1 col-xs-offset-1 col-xs-4">
+						<a href="index.html"><img class="img_vignette_actu img-circle"
+							alt="Plongeoir" src="images/2-DSC_5723_DxO.jpg" /></a>
+					</div>
+
+					<div
+						class="actu_div col-sm-offset-2 col-sm-1 col-xs-offset-2 col-xs-4">
+						<a href="index.html"><img class="img_vignette_actu img-circle"
+							alt="Lisboa" src="images/1-DSC_5675_DxO.jpg" /></a>
+					</div>
 				</nav>
-			</article>
+			</div>
+		</article>
 
-		</section>
 
+		<!--  Accueil -->
+
+		<article class="article_accueil row">
+			<p id="presentation_phrase" class="col-sm-12">
+				Bienvenue sur <span class="nom_site">La Cartographie des
+					Nuages</span>.
+			</p>
+		</article>
+
+
+		<article class="article_accueil">
+			<nav class="row">
+				<div class="col-md-12 image_menu">
+					<a href="index.html"><img
+						class="img-rounded img-responsive img-thumbnail img_article_accueil"
+						alt="Portfolio" src="images/4-DSC_8555_DxO_4.jpg" /><br />Portfolio</a>
+				</div>
+				<!-- 					<div class="col-md-6 image_menu"> -->
+				<!-- 							<a href="index.html"><img class="img_article_accueil" -->
+				<!-- 								alt="Astro" src="images/4-DSC_8555_DxO_4.jpg" />Astro</a> -->
+				<!-- 						</div> -->
+				<!-- 					<div class="col-md-6 image_menu"> -->
+				<!-- 							<a href="index.html"><img class="img_article_accueil" -->
+				<!-- 								alt="Vidéos" src="images/4-DSC_8555_DxO_4.jpg" />Vidéos</a> -->
+				<!-- 						</div> -->
+				<!-- 					<div class="col-md-6 image_menu"> -->
+				<!-- 							<a href="index.html"><img class="img_article_accueil" -->
+				<!-- 								alt="Voyages" src="images/4-DSC_8555_DxO_4.jpg" />Voyages</a> -->
+				<!-- 						</div> -->
+				<!-- 					<div class="col-md-6 image_menu"> -->
+				<!-- 							<a href="index.html"><img class="img_article_accueil" -->
+				<!-- 								alt="Galeries" src="images/4-DSC_8555_DxO_4.jpg" />Galeries</a> -->
+				<!-- 						</div> -->
+			</nav>
+		</article>
+
+
+		<!-- Footer -->
 
 		<footer>
-			<nav id="liens_footer">
-				<ul>
-					<li><a href="index.html">Accueil</a></li>
-					<li><a href="index.html">Portfolio</a></li>
-					<li><a href="index.html">Astro</a></li>
-					<li><a href="index.html">Vidéos</a></li>
-					<li><a href="index.html">Voyages</a></li>
-					<li><a href="index.html">Galeries</a></li>
-				</ul>
-			</nav>
-			<nav id="contenu_footer">
-				<ul>
-					<li>Tous droits réservés</li>
-					<li><a href="#">A propos</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</nav>
+			<div class="row">
+				<nav id="liens_footer" class="col-sm-12">
+					<ul>
+						<li><a href="index.html">Accueil</a></li>
+						<li><a href="index.html">Portfolio</a></li>
+						<li><a href="index.html">Astro</a></li>
+						<li><a href="index.html">Vidéos</a></li>
+						<li><a href="index.html">Voyages</a></li>
+						<li><a href="index.html">Galeries</a></li>
+
+					</ul>
+				</nav>
+			</div>
+
+			<div class="row">
+				<nav id="contenu_footer" class="col-sm-12">
+					<ul>
+						<li>Tous droits réservés</li>
+						<li><a href="#">A propos</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+
 		</footer>
 
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="bower_components/bootstrap/js/bootstrap.min.js"></script>
+
 	</div>
-	
-
-        
-
-
 </body>
 </html>
