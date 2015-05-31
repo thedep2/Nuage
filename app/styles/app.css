@@ -94,7 +94,19 @@ nav a:hover {
 .img_vignette_actu {
 	width: 7em;
 	height: auto;
+	border: 1px solid #ddd;
 }
+
+
+
+.img_vignette_actu:hover {
+	width: 9em;
+	height: auto;
+	position: absolute;
+	top:-1em;
+	left:-1em;
+}
+
 
 .article_accueil {
 	marging: 5em;
@@ -138,7 +150,6 @@ footer {
 	background-color: #74D0F1;
 	color: #FFFFFF;
 	text-align: center;
-	margin: 0.5em;
 	padding: 0.1em;
 	
 }
