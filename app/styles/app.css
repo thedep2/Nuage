@@ -8,11 +8,12 @@ body {
 }
 
 [class*="col-"], footer {
-/* 	background-color: lightgreen; */
-/* 	border: 2px solid black; */
+	/* 	background-color: lightgreen; */
+	/* 	border: 2px solid black; */
 	/* 	border-radius: 6px; */
 	/* 	line-height: 40px; */
 	/* 	text-align: center; */
+	
 }
 
 #bloc_page {
@@ -82,31 +83,40 @@ nav a:hover {
 	height: 6em;
 }
 
+#actu a {
+	color: #FFFFFF;
+}
+
 .actu_div {
 	padding: 0em;
 	height: 6em;
-}
-
-#actu a {
-	color: #FFFFFF;
 }
 
 .img_vignette_actu {
 	width: 7em;
 	height: auto;
 	border: 1px solid #ddd;
+	position: absolute;
+	transition-property: top, left, width, filter, -webkit-filter,
+		-moz-filter;
+	transition-duration: 0.3s;
+	top: 0em;
+	left: 0em;
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	filter: grayscale(0%);
 }
-
-
 
 .img_vignette_actu:hover {
 	width: 9em;
 	height: auto;
 	position: absolute;
-	top:-1em;
-	left:-1em;
+	top: -1em;
+	left: -1em;
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);
 }
-
 
 .article_accueil {
 	marging: 5em;
@@ -124,24 +134,24 @@ nav a:hover {
 }
 
 .img_article_accueil {
-/* 	width: 12em; */
-/* 	height: auto; */
+	/* 	width: 12em; */
+	/* 	height: auto; */
 	text-align: center;
 }
 
 .image_menu {
-/* 	width: 16em; */
+	/* 	width: 16em; */
 	text-align: center;
 }
 
 footer {
 	padding-top: 1em;
-/* 	width: 99.5%; */
+	/* 	width: 99.5%; */
 	vertical-align: center;
 }
 
 #liens_footer, #contenu_footer {
-/* 	display: block; */
+	/* 	display: block; */
 	vertical-align: center;
 	text-align: center;
 }
@@ -151,7 +161,6 @@ footer {
 	color: #FFFFFF;
 	text-align: center;
 	padding: 0.1em;
-	
 }
 
 #liens_footer ul {
@@ -162,6 +171,7 @@ footer {
 #liens_footer a {
 	background-color: #74D0F1;
 	color: #FFFFFF;
+	margin: 0.5em;
 }
 
 #liens_footer a:hover {
@@ -169,17 +179,16 @@ footer {
 	text-decoration: none;
 }
 
-
-#contenu_footer  {
-	  font-family: 'Josefin Sans', "Trebuchet MS", Arial, Helvetica,
- sans-serif;
+#contenu_footer {
+	font-family: 'Josefin Sans', "Trebuchet MS", Arial, Helvetica,
+		sans-serif;
 	color: #222;
 	font-size: 1em;
 }
 
 #contenu_footer a {
-	  font-family: 'Josefin Sans', "Trebuchet MS", Arial, Helvetica,
- sans-serif;
+	font-family: 'Josefin Sans', "Trebuchet MS", Arial, Helvetica,
+		sans-serif;
 	color: #000000;
 	font-size: 1em;
 }
@@ -188,7 +197,6 @@ footer {
 	color: #850606;
 	text-decoration: none;
 }
-
 
 @media screen and (max-width: 992px) {
 	#titre_principal {
@@ -207,6 +215,6 @@ footer {
 		top: 15%;
 	}
 	nav a {
-	font-size: 0.8em;
-}
+		font-size: 0.8em;
+	}
 }
