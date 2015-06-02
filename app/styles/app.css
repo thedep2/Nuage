@@ -165,7 +165,8 @@ footer {
 
 #liens_footer ul {
 	vertical-align: center;
-	margin: 0.1em;;
+	margin: 0.1em;
+	padding-left: 0em;
 }
 
 #liens_footer a {
@@ -201,13 +202,15 @@ footer {
 /*PORTFOLIO*/
 
 #portfolio_article {
-	height: 46em;
+/* 	height: 46em; */
 /* 	background-color: blue; */
+padding-top: 1em;
+padding-bottom: 1em;
 }
 
 #portefolio {
 /* 	background-color: red; */
-	height: 46em;
+/* 	height: 46em; */
 }
 
 
@@ -231,4 +234,7 @@ footer {
 	nav a {
 		font-size: 0.8em;
 	}
+	#liens_footer a {
+	margin: 0.1em;
+}
 }
