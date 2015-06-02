@@ -198,6 +198,19 @@ footer {
 	text-decoration: none;
 }
 
+/*PORTFOLIO*/
+
+#portfolio_article {
+	height: 46em;
+/* 	background-color: blue; */
+}
+
+#portefolio {
+/* 	background-color: red; */
+	height: 46em;
+}
+
+
 @media screen and (max-width: 992px) {
 	#titre_principal {
 		text-align: center;
@@ -209,6 +222,7 @@ footer {
 		padding-left: 0em;
 	}
 }
+
 
 @media screen and (max-width: 768px) {
 	#actu_article {
