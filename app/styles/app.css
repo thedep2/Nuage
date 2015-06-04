@@ -29,6 +29,11 @@ body {
 	padding-right: 1em;
 }
 
+#titre_principal a {
+	color: black;
+	text-decoration: none;
+}
+
 #nav_principal {
 	margin-top: 20px;
 	margin-bottom: 10px;
@@ -200,19 +205,17 @@ footer {
 }
 
 /*PORTFOLIO*/
-
 #portfolio_article {
-/* 	height: 46em; */
-/* 	background-color: blue; */
-padding-top: 1em;
-padding-bottom: 1em;
+	height: 800 px;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
-#portefolio {
-/* 	background-color: red; */
-/* 	height: 46em; */
+#portfolio {
+	/* 	background-color: red; */
+	/* 	height: 46em; */
+	
 }
-
 
 @media screen and (max-width: 992px) {
 	#titre_principal {
@@ -226,7 +229,6 @@ padding-bottom: 1em;
 	}
 }
 
-
 @media screen and (max-width: 768px) {
 	#actu_article {
 		top: 15%;
@@ -235,6 +237,6 @@ padding-bottom: 1em;
 		font-size: 0.8em;
 	}
 	#liens_footer a {
-	margin: 0.1em;
-}
+		margin: 0.1em;
+	}
 }
