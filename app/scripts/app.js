@@ -12,7 +12,7 @@ nuageApp.config(['$routeProvider',
 	$routeProvider.
 	when('/index', {
 		templateUrl: 'views/acceuil.html',
-		controller: 'IndexController'
+		controller: 'AcceuilController'
 	}).
 	when('/portfolio', {
 		templateUrl: 'views/portfolio.html',

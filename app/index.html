@@ -40,14 +40,14 @@
 
 
 </head>
-<body ng-controller="IndexController">
+<body>
 
 
 	<div id="bloc_page" class="container-fluid">
 
 		<!-- HEADER -->
 
-		<header id="banniere" class="row">
+		<header id="banniere" class="row" ng-controller="StructureController">
 			<!-- Titre principal -->
 			<h1 id="titre_principal" class="col-md-6">
 				<a href="#/index">La Cartographie des Nuages</a>
@@ -56,12 +56,8 @@
 			<!-- Menu banniere -->
 			<nav id="nav_principal" class="col-md-6">
 				<ul>
-					<li><a href="#/index">Accueil</a></li>
-					<li><a href="#/portfolio">Portfolio</a></li>
-					<li><a href="#/index">Astro</a></li>
-					<li><a href="#/index">Vidéos</a></li>
-					<li><a href="#/index">Voyages</a></li>
-					<li><a href="#/index">Galeries</a></li>
+					<li ng-repeat="item in menu"><a href="{{item.lien}}">{{item.nom}}</a>
+					</li>
 				</ul>
 			</nav>
 		</header>
@@ -73,17 +69,12 @@
 
 		<!-- Footer -->
 
-		<footer>
+		<footer ng-controller="StructureController">
 			<div class="row">
 				<nav id="liens_footer" class="col-sm-12">
 					<ul>
-						<li><a href="#/index">Accueil</a></li>
-						<li><a href="#/portfolio">Portfolio</a></li>
-						<li><a href="#/index">Astro</a></li>
-						<li><a href="#/index">Vidéos</a></li>
-						<li><a href="#/index">Voyages</a></li>
-						<li><a href="#/index">Galeries</a></li>
-
+						<li ng-repeat="item in menu"><a href="{{item.lien}}">{{item.nom}}</a>
+						</li>
 					</ul>
 				</nav>
 			</div>
@@ -94,8 +85,8 @@
 				<nav id="contenu_footer" class="col-sm-12">
 					<ul>
 						<li>Tous droits réservés</li>
-						<li><a href="#">A propos</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="{{aProposLien}}">A propos</a></li>
+						<li><a href="{{contactLien}}">Contact</a></li>
 					</ul>
 				</nav>
 			</div>

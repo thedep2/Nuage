@@ -1,0 +1,29 @@
+[
+	{
+		"lien": "#/index",
+		"src": "images/4-DSC_8555_DxO_4.jpg",
+		"alt": "Chili 2015",
+		"class": "col-sm-offset-1"
+	},
+
+	{
+		"lien": "#/index",
+		"src": "images/3-DSC_6307_DxO_3.jpg",
+		"alt": "Urbex",
+		"class": "col-sm-offset-2"
+	},
+
+	{
+		"lien": "#/index",
+		"src": "images/2-DSC_5723_DxO.jpg",
+		"alt": "Plongeoir",
+		"class": "col-sm-offset-2"
+	},
+
+	{
+		"lien": "#/index",
+		"src": "images/1-DSC_5675_DxO.jpg",
+		"alt": "Lisboa",
+		"class": "col-sm-offset-2"
+	}
+]
