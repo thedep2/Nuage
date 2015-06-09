@@ -1,0 +1,59 @@
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<link rel="stylesheet" href="styles/app.css">
+
+
+<!-- <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script> -->
+
+<script type="text/javascript" language="JavaScript" src="scripts/jquery-2.1.4.js"></script>
+
+<!-- REQUIRED FOR PARALLAX -->
+<script type="text/javascript" language="JavaScript" src="scripts/parallax.js"></script>
+<script type="text/javascript" language="JavaScript" src="js/jquery.event.frame.js"></script>
+
+
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		alert();
+		$('#parallax .parallax-layer').parallax({
+			mouseport : $('#parallax')
+		});
+	});
+</script>
+
+
+<!-- /REQUIRED FOR PARALLAX -->
+
+
+<title>jQuery4u Demo - The Parallax Effect</title>
+
+
+
+</head>
+<body>
+	<div id="content">
+
+		<!-- REQUIRED FOR PARALLAX -->
+		<div id="parallax" class="clear">
+						<div class="parallax-layer" style="width: 500px; height: 259px;">
+				<img src="images/Actu/cloud2.png" alt=""
+					style="width: 500px; height: 259px;" />
+			</div>
+<!-- 			<div class="parallax-layer" style="width: 500px; height: 250px;"> -->
+<!-- 				<img src="images/Actu/cloud2.png" alt="" -->
+<!-- 					style="width: 500px; height: 250px;" /> -->
+<!-- 			</div> -->
+<!-- 			<div class="parallax-layer" style="width: 1200px; height: 300px;"> -->
+<!-- 				<img src="images/Actu/cloud3.png" alt="" -->
+<!-- 					style="width: 1200px; height: 300px;" /> -->
+<!-- 			</div> -->
+		</div>
+		<!-- /REQUIRED FOR PARALLAX -->
+
+	</div>
+	
+	</body>
+	</html>
+	
