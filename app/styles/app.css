@@ -100,7 +100,6 @@ nav a:hover {
 	position: absolute;
 }
 
-
 #actu_nav {
 	width: 100%;
 	height: 6em;
@@ -238,9 +237,8 @@ footer {
 	
 }
 
-
-/* DESKTOP MOYEN */
-@media screen and (max-width: 992px) {
+/* TABLETTE */
+@media  (max-width: 991px) {
 	#titre_principal {
 		text-align: center;
 		padding-right: 0em;
@@ -252,20 +250,46 @@ footer {
 	}
 }
 
-/* TABLETTE */
-@media screen and (max-width: 768px) {
-
-}
-
 /* SMARTPHONE*/
-@media screen and (max-width: 768px) {
+@media  (max-width: 767px) {
 	#actu_article {
 		top: 15%;
+	}
+	#actu_nav {
+		/* 		top: 1%; */
+		left: 0px;
+	}
+	.actu_div {
+		margin: 0px;
+		margin-bottom: 3em;
+		/* padding: 0px; */
+		text-align: center;
+	}
+	.img_vignette_actu {
+		position: relative;
+	}
+	.img_vignette_actu:hover {
+		position: relative;
+		top: -1em;
+		left: 0em;
+	}
+	.img_vignette_actu:hover {
+		
 	}
 	nav a {
 		font-size: 0.8em;
 	}
+
+	.image_menu {
+	margin-bottom: 1em;
+	}
 	#liens_footer a {
 		margin: 0.1em;
+	}
+	#liens_footer {
+		width: 100%;
+	}
+	#parallax_bg {
+		height: 23em;
 	}
 }
