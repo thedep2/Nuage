@@ -25,7 +25,7 @@
 	rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="styles/app.css">
 
-<script type="text/javascript" language="JavaScript" src="scripts/app.js"></script>
+
 
 <script type="text/javascript" language="JavaScript" src="scripts/jquery-2.1.4.js"></script>
 
@@ -34,7 +34,7 @@
 <script type="text/javascript" language="JavaScript" src="scripts/parallax.js"></script>
 <script type="text/javascript" language="JavaScript" src="js/jquery.event.frame.js"></script>
 
-
+<script type="text/javascript" language="JavaScript" src="scripts/app.js"></script>
 
 
 <!--[if lt IE 9]>
@@ -62,7 +62,7 @@
 				<ul>
 					<li><a href="index.html">Accueil</a></li>
 					<li><a href="portfolio.html">Portefolio</a></li>
-					<li><a href="index.html">Astro</a></li>
+					<li><a href="astro.html">Astro</a></li>
 					<li><a href="index.html">Vidéos</a></li>
 					<li><a href="index.html">Voyages</a></li>
 					<li><a href="index.html">Galeries</a></li>
@@ -105,7 +105,7 @@
 
 					<div class="parallax-layer" style="width: 510px; height: 200px;">
 						<img src="images/Actu/Parallax/cloud6.png" alt=""
-							style="width: 510px; height: 200px; position:absolute; left:-35em; top:0em;" />
+							style="width: 510px; height: 200px; position:absolute; left:-45em; top:0em;" />
 					</div>
 
 					<div class="parallax-layer" style="width: 600px; height: 256px;">
@@ -157,11 +157,19 @@
 
 <article class="article_accueil">
 	<nav class="row">
-		<div class="col-md-12 image_menu">
+	
+		<div class="col-md-6 image_menu">
 			<a href="portfolio.html"><img
 				class="img-rounded img-responsive img-thumbnail img_article_accueil"
 				alt="Portfolio" src="images/4-DSC_8555_DxO_4.jpg" /><br />Portefolio</a>
 		</div>
+		
+				<div class="col-md-6 image_menu">
+			<a href="astro.html"><img
+				class="img-rounded img-responsive img-thumbnail img_article_accueil"
+				alt="Astro" src="images/4-DSC_8555_DxO_4.jpg" /><br />Astro</a>
+		</div>
+		
 		<!-- 					<div class="col-md-6 image_menu"> -->
 		<!-- 							<a href="#/index"><img class="img_article_accueil" -->
 		<!-- 								alt="Astro" src="images/4-DSC_8555_DxO_4.jpg" />Astro</a> -->
@@ -192,7 +200,7 @@
 					<ul>
 					<li><a href="index.html">Accueil</a></li>
 					<li><a href="portfolio.html">Portefolio</a></li>
-					<li><a href="#">Astro</a></li>
+					<li><a href="astro.html">Astro</a></li>
 					<li><a href="#">Vidéos</a></li>
 					<li><a href="#">Voyages</a></li>
 					<li><a href="#">Galeries</a></li>
@@ -219,17 +227,6 @@
 	</div>
 	
 
-<script type="text/javascript">
-	jQuery(document).ready(function() {
-		$('#parallax .parallax-layer').parallax({
-			mouseport : $('#parallax')
-		});
-		
-		jQuery('.parallax-layer')
-		.parallax({}, {xparallax: '0.05'}, {xparallax: '0.2'}, {xparallax: '0.3'}, {xparallax: '0.4'}, {xparallax: '0.6'}, {xparallax: '0.8'});
-		
-		
-	});
-</script>
+
 </body>
 </html>
