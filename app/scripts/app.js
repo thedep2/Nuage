@@ -4,6 +4,10 @@ jQuery(document).ready(function() {
 	if ($(window).width() > 992) {
 		$('.parallax-bg').css('height','21em');
 		
+		if ($(window).width() > 1200) {
+			$('.parallax-bg').css('left','7em');
+		}
+		
 		$('#parallax .parallax-layer').parallax({
 			mouseport : $('#parallax')
 		});

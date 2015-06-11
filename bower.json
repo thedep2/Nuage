@@ -2,5 +2,8 @@
   "name": "nuage",
   "version": "0.0.1",
   "appPath": "app",
-  "moduleName": "nuageApp"
+  "moduleName": "nuageApp",
+  "dependencies": {
+  }
+  
 }
