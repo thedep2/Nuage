@@ -21,6 +21,14 @@ body {
 	margin: auto;
 }
 
+#bloc_page_astro {
+	text-align: center;
+	margin: auto;
+	background-color: black;
+}
+
+
+
 #titre_principal {
 	font-family: 'Satisfy', cursive;
 	background-color: #FFFFFF;
@@ -29,8 +37,21 @@ body {
 	padding-right: 1em;
 }
 
+#titre_principal_astro {
+	font-family: 'Satisfy', cursive;
+	background-color: black;
+	font-size: 2em;
+	text-align: right;
+	padding-right: 1em;
+}
+
 #titre_principal a {
 	color: black;
+	text-decoration: none;
+}
+
+#titre_principal_astro a {
+	color: white;
 	text-decoration: none;
 }
 
@@ -54,6 +75,8 @@ nav li {
 	margin-right: 1em;
 }
 
+
+
 nav a {
 	font-size: 1.3em;
 	padding-bottom: 3px;
@@ -62,6 +85,15 @@ nav a {
 
 nav a:hover {
 	color: #850606;
+	text-decoration: none;
+}
+
+#bloc_page_astro a {
+	color : white;
+}
+
+#bloc_page_astro a:hover {
+	color: yellow;
 	text-decoration: none;
 }
 
@@ -175,7 +207,7 @@ footer {
 	vertical-align: center;
 }
 
-#liens_footer, #contenu_footer {
+#liens_footer, #liens_footer_astro , #contenu_footer {
 	/* 	display: block; */
 	vertical-align: center;
 	text-align: center;
@@ -188,7 +220,14 @@ footer {
 	padding: 0.1em;
 }
 
-#liens_footer ul {
+#liens_footer_astro {
+	background-color: #850606;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 0.1em;
+}
+
+#liens_footer, #liens_footer_astro ul {
 	vertical-align: center;
 	margin: 0.1em;
 	padding-left: 0em;
@@ -200,8 +239,18 @@ footer {
 	margin: 0.5em;
 }
 
+#liens_footer_astro a {
+	color: #FFFFFF;
+	margin: 0.5em;
+}
+
 #liens_footer a:hover {
 	color: #850606;
+	text-decoration: none;
+}
+
+#liens_footer_astro a:hover {
+	color: yellow;
 	text-decoration: none;
 }
 
@@ -222,6 +271,14 @@ footer {
 #contenu_footer a:hover {
 	color: #850606;
 	text-decoration: none;
+}
+
+#bloc_page_astro #contenu_footer a {
+	color: #850606;
+}
+
+#bloc_page_astro #contenu_footer a:hover {
+	color: yellow;
 }
 
 /*PORTFOLIO*/
