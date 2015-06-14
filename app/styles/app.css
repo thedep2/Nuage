@@ -93,7 +93,7 @@ nav a:hover {
 }
 
 #bloc_page_astro a:hover {
-	color: yellow;
+	color: #FFD700;
 	text-decoration: none;
 }
 
@@ -250,7 +250,7 @@ footer {
 }
 
 #liens_footer_astro a:hover {
-	color: yellow;
+	color: #FFD700;
 	text-decoration: none;
 }
 
@@ -258,6 +258,11 @@ footer {
 	font-family: 'Josefin Sans', "Trebuchet MS", Arial, Helvetica,
 		sans-serif;
 	color: #222;
+	font-size: 1em;
+}
+
+#bloc_page_astro #contenu_footer {
+	color: #FFD700;
 	font-size: 1em;
 }
 
@@ -278,7 +283,7 @@ footer {
 }
 
 #bloc_page_astro #contenu_footer a:hover {
-	color: yellow;
+	color: #FFD700;
 }
 
 /*PORTFOLIO*/
