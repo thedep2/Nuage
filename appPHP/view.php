@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="no-js" lang="fr">
 <head>
@@ -8,12 +9,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<title>La Cartographie des Nuages</title>
+<title>La Cartographie des Nuages - Acceuil</title>
 <link rel="icon" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <link rel="stylesheet" href="styles/normalize.css">
-<script src="scripts/vendor/modernizr-2.8.3.min.js"></script>
+
 
 <link rel="stylesheet"
 	href="bower_components/bootstrap/css/bootstrap.css">
@@ -27,15 +28,6 @@
 
 
 
-<script type="text/javascript" language="JavaScript" src="scripts/jquery-2.1.4.js"></script>
-
-<script type="text/javascript" language="JavaScript" src="bower_components/bootstrap/js/bootstrap.min.js"></script>
-
-<script type="text/javascript" language="JavaScript" src="scripts/parallax.js"></script>
-<script type="text/javascript" language="JavaScript" src="scripts/jquery.event.frame.js"></script>
-
-<script type="text/javascript" language="JavaScript" src="scripts/app.js"></script>
-
 
 <!--[if lt IE 9]>
     <script src="scripts/html5shiv.js"></script>
@@ -45,6 +37,9 @@
 
 </head>
 <body>
+
+
+
 
 
 	<div id="bloc_page" class="container-fluid">
@@ -63,7 +58,7 @@
 					<li><a href="index.html">Accueil</a></li>
 					<li><a href="portfolio.html">Portefolio</a></li>
 					<li><a href="astro.html">Astro</a></li>
-					<li><a href="index.html">Vidéos</a></li>
+					<li><a href="index.html">Vid&#xE9;os</a></li>
 					<li><a href="index.html">Voyages</a></li>
 					<li><a href="index.html">Galeries</a></li>
 				</ul>
@@ -75,6 +70,7 @@
 		
 
 <!-- Actualites -->
+
 
 
 <article id="actu" class="row">
@@ -116,29 +112,25 @@
 				</div>
 
 				<nav class="row" id="actu_nav">
-					<div class="actu_div col-sm-offset-1 col-sm-1 col-xs-offset-1 col-xs-6">
+				
+										<?php
+    $offset = 1;
+    foreach ($photosActu as $photoActu): ?>
+				
+				<div class="actu_div col-sm-offset-<?php echo $offset ?> col-sm-1 col-xs-offset-1 col-xs-6">
 						<a href="#" class="actu_lien"><img
-							class="img_vignette_actu img-circle" alt="Chili 2015"
-							src="images/4-DSC_8555_DxO_4.jpg" /></a>
+							class="img_vignette_actu img-circle" alt="<?php echo $photoActu['photo_nom'] ?>"
+							src="images/vignettes/<?php echo $photoActu['photo_src'] ?>" /></a>
 					</div>
 					
-										<div class="actu_div col-sm-offset-2 col-sm-1 col-xs-offset-1 col-xs-6">
-						<a href="#" class="actu_lien"><img
-							class="img_vignette_actu img-circle" alt="Urbex"
-							src="images/3-DSC_6307_DxO_3.jpg" /></a>
-					</div>
-					
-										<div class="actu_div col-sm-offset-2 col-sm-1 col-xs-offset-1 col-xs-6">
-						<a href="#"><img
-							class="img_vignette_actu img-circle" alt="Plongeoir"
-							src="images/2-DSC_5723_DxO.jpg" /></a>
-					</div>
-					
-										<div class="actu_div col-sm-offset-2 col-sm-1 col-xs-offset-1 col-xs-6">
-						<a href="#"><img
-							class="img_vignette_actu img-circle" alt="Lisboa"
-							src="images/1-DSC_5675_DxO.jpg" /></a>
-					</div>
+				
+				<?php 
+				if ($offset == 1)
+				{
+					$offset = 2;
+				}
+				endforeach ?>
+				
 
 				</nav>
 			
@@ -161,13 +153,13 @@
 		<div class="col-sm-6 image_menu">
 			<a href="portfolio.html"><img
 				class="img-rounded img-responsive img-thumbnail img_article_accueil"
-				alt="Portfolio" src="images/4-DSC_8555_DxO_4.jpg" /><br />Portefolio</a>
+				alt="Portfolio" src="images/vignettes/4-DSC_8555_DxO_4.jpg" /><br />Portefolio</a>
 		</div>
 		
 				<div class="col-sm-6 image_menu">
 			<a href="astro.html"><img
 				class="img-rounded img-responsive img-thumbnail img_article_accueil"
-				alt="Astro" src="images/4-DSC_8555_DxO_4.jpg" /><br />Astro</a>
+				alt="Astro" src="images/vignettes/4-DSC_8555_DxO_4.jpg" /><br />Astro</a>
 		</div>
 		
 		<!-- 					<div class="col-md-6 image_menu"> -->
@@ -176,7 +168,7 @@
 		<!-- 						</div> -->
 		<!-- 					<div class="col-md-6 image_menu"> -->
 		<!-- 							<a href="#/index"><img class="img_article_accueil" -->
-		<!-- 								alt="Vidéos" src="images/4-DSC_8555_DxO_4.jpg" />Vidéos</a> -->
+		<!-- 								alt="Vid&#xE9;os" src="images/4-DSC_8555_DxO_4.jpg" />Vid&#xE9;os</a> -->
 		<!-- 						</div> -->
 		<!-- 					<div class="col-md-6 image_menu"> -->
 		<!-- 							<a href="#/index"><img class="img_article_accueil" -->
@@ -201,7 +193,7 @@
 					<li><a href="index.html">Accueil</a></li>
 					<li><a href="portfolio.html">Portefolio</a></li>
 					<li><a href="astro.html">Astro</a></li>
-					<li><a href="#">Vidéos</a></li>
+					<li><a href="#">Vid&#xE9;os</a></li>
 					<li><a href="#">Voyages</a></li>
 					<li><a href="#">Galeries</a></li>
 					</ul>
@@ -213,7 +205,7 @@
 			<div class="row">
 				<nav id="contenu_footer" class="col-sm-12">
 					<ul>
-						<li>Tous droits réservés</li>
+						<li>Tous droits r&#xE9;serv&#xE9;s</li>
 						<li><a href="#">A propos</a></li>
 						<li><a href="#">Contact</a></li>
 					</ul>
@@ -226,6 +218,28 @@
 
 	</div>
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="scripts/vendor/modernizr-2.8.3.min.js"></script>
+<script type="text/javascript" language="JavaScript" src="scripts/jquery-2.1.4.js"></script>
+
+<script type="text/javascript" language="JavaScript" src="bower_components/bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" language="JavaScript" src="scripts/parallax.js"></script>
+<script type="text/javascript" language="JavaScript" src="scripts/jquery.event.frame.js"></script>
+
+<script type="text/javascript" language="JavaScript" src="scripts/app.js"></script>
 
 
 </body>
