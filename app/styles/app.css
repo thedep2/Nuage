@@ -227,8 +227,7 @@ footer {
 	padding: 0.1em;
 }
 
-#liens_footer, #liens_footer_astro ul {
-	vertical-align: center;
+#liens_footer ul, #liens_footer_astro ul {
 	margin: 0.1em;
 	padding-left: 0em;
 }
