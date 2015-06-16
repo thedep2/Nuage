@@ -115,12 +115,12 @@
 				
 										<?php
     $offset = 1;
-    foreach ($photosActu as $photoActu): ?>
+    foreach ($actus as $actu): ?>
 				
 				<div class="actu_div col-sm-offset-<?php echo $offset ?> col-sm-1 col-xs-offset-1 col-xs-6">
 						<a href="#" class="actu_lien"><img
-							class="img_vignette_actu img-circle" alt="<?php echo $photoActu['photo_nom'] ?>"
-							src="images/vignettes/<?php echo $photoActu['photo_src'] ?>" /></a>
+							class="img_vignette_actu img-circle" alt="<?php echo $actu->getNom()?>"
+							src="images/vignettes/<?php echo $actu->getSrc() ?>" /></a>
 					</div>
 					
 				
