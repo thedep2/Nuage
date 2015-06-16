@@ -16,10 +16,13 @@
 
 
 			<ol class="carousel-indicators">
-				<li data-target="#carousel" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel" data-slide-to="1"></li>
-				<li data-target="#carousel" data-slide-to="2"></li>
-				<li data-target="#carousel" data-slide-to="3"></li>
+			
+				{% for photo in portfolio %}
+
+					<li data-target="#carousel" data-slide-to="{{ loop.index }}" class="{{photo.active}}"></li>
+
+				{% endfor %}
+				
 			</ol>
 
 			<div class="carousel-inner ">
