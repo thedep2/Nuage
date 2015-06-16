@@ -27,14 +27,6 @@
 
 
 
-<script type="text/javascript" language="JavaScript" src="scripts/jquery-2.1.4.js"></script>
-
-<script type="text/javascript" language="JavaScript" src="bower_components/bootstrap/js/bootstrap.min.js"></script>
-
-<script type="text/javascript" language="JavaScript" src="scripts/parallax.js"></script>
-<script type="text/javascript" language="JavaScript" src="scripts/jquery.event.frame.js"></script>
-
-<script type="text/javascript" language="JavaScript" src="scripts/app.js"></script>
 
 
 <!--[if lt IE 9]>
@@ -46,19 +38,9 @@
 </head>
 <body>
 
-<div style="padding:25px;text-align:center;" >
+<div id="galerie" style="text-align:left;" >
 
-<div class="image">
-<img id="img1">
-</div>
 
-<div class="image" >
-<img id="img2">
-</div>
-
-<div class="image" >
-<img id="img3">
-</div>
 
 </div>
 
@@ -69,26 +51,148 @@
 <script>
 jQuery(document).ready(function() {
 	
+	var tableauImages = [
+	                     [1, 'https://lh3.googleusercontent.com/uOaKni06BJYBvXrvYwGwqZqRHy5HNiR8pf7vH8Aol8Nu', 2048, 1516, 'Ciao Marseille'],
+	                     [2, 'https://lh3.googleusercontent.com/wsaG8rushqI0rFYTihsot4EvVflZTxry5qawpD28LUDJ', 2048, 1536, 'Ciao Marseille'],
+	                     [3, 'https://lh3.googleusercontent.com/osd4QJZbJHqtP052mGaarCDYMc48_ZpeMUkjhKQIx8IH', 2048, 1536, 'Ciao Marseille'],
+	                     [4, 'https://lh3.googleusercontent.com/o4vTXdi0bbLkP5LRGRWIZ337kSgF2IjgvxTZ4q76qFHM', 2048, 1153, 'Ciao Marseille'],
+	                     [5, 'https://lh3.googleusercontent.com/NG1ftWY22s5T1wBq5N33qzKib529Q_NgNzU2MFiF0EmV', 2048, 1516, 'Ciao Marseille'],
+	                     [6, 'https://lh3.googleusercontent.com/OUzNnDZSH3nWIMMilr-OMcFIuAm4z-I8xEDfechjZFvr', 1516, 2048, 'Ciao Marseille'],
+	                     [7, 'https://lh3.googleusercontent.com/JCYgYeraAazmkWXc-iBUCRhMSCWbLsV4vTqjbnndjm5A', 2048, 1516, 'Ciao Marseille'],
+	                     [8, 'https://lh3.googleusercontent.com/xoM97fUB2noS-tgKtdWfZbZKRLPn-IIInBXAx8suAbKy', 2048, 1152, 'Ciao Marseille'],
+	                     [9, 'https://lh3.googleusercontent.com/40ufepG5sl0TnbRb17mC8EuPlbmOZyd6BounQDcQFmrc', 2048, 1357, 'Ciao Marseille'],
+	                     [10, 'https://lh3.googleusercontent.com/Kra42zy8FNq7HATIzQ48qmF3n8yKD5MRWb2zsqqvPeVE', 2048, 895, 'Ciao Marseille'],
+	                     [11, 'https://lh3.googleusercontent.com/k5AJL9aoqBHhl3JyYDUdr2eMO3Zi_zFtmTazBCLozCqo', 2048, 1357, 'Ciao Marseille'],
+	                     [12, 'https://lh3.googleusercontent.com/hpaxfyR8xcRonTfg59DsvzlQBtiWK-sG00ss35yBwP2s', 2048, 814, 'Ciao Marseille'],
+	                     [13, 'https://lh3.googleusercontent.com/bCjl78HkK_hXp2WA_Nu_gaGqDCRCD7t9_4T2yvJQo4L_', 2048, 1357, 'Ciao Marseille'],
+	                     [14, 'https://lh3.googleusercontent.com/3IFyetectmkzAsAqe3SRxrSf_H3Pz4WaKdo5MVMq6HWe', 1536, 2048, 'Ciao Marseille'],
+	                     [15, 'https://lh3.googleusercontent.com/mzTaHwz6msRIcSToB0GvEMrHaS2nO1WIV6lf8CkdK9vR', 2048, 1516, 'Ciao Marseille'],
+	                     [16, 'https://lh3.googleusercontent.com/MU_KSiBlN8liPvb1o_JmAnzrCK7AfkG06F0V0xfRctg_', 1516, 2048, 'Ciao Marseille'],
+	                     [17, 'https://lh3.googleusercontent.com/uXcf6h3dNRLZ9mXRmXxavmfsNEwCqSmDyQZ0xwAhk_4w', 2048, 1152, 'Ciao Marseille'],
+	                     [18, 'https://lh3.googleusercontent.com/vafh96WmKkjvWPJ6cThIRFr1ERxfpGMtsw9ZTvya_6A_', 2048, 1357, 'Ciao Marseille'],
+	                     [19, 'https://lh3.googleusercontent.com/kTFAyceeWzg6DHlDcDjmZ8Mb91FewYYjWAOJQ-Ir6USB', 2048, 1152, 'Ciao Marseille'],
+	                     [20, 'https://lh3.googleusercontent.com/GNMB1JIjIjfrcCZFNZKIeCX4_cjXpr01ZGqecNgCiaaS', 2048, 1357, 'Ciao Marseille']
+	                     
+	                     ];
+	
+	function calculTailleLigne() {
+		var largeurFenetre = $(window).width();
+		return Math.round(largeurFenetre - ((20+calculMarge())*2));
+	}
+	
+	function calculMarge() {
+		var largeurFenetre = $(window).width();
+		var marge = 0;
+		if (largeurFenetre <= 768) {
+			marge =  10;
+		} else if (768 < largeurFenetre && largeurFenetre <= 992) {
+			marge =  15;
+		} else if (992 < largeurFenetre && largeurFenetre <= 1200) {
+			marge =  20;
+		} else {
+			marge =  25;
+		}
+		$('#galerie').css("padding", marge+"px");
+		return marge;
+	}
+	
+	function calculRatioLigne(tailleLigne) {
+		if (tailleLigne <= 500) {
+			return 0.7;
+		} else if (500 < tailleLigne && tailleLigne <= 768) {
+			return 1;
+		} else if (768 < tailleLigne && tailleLigne <= 992) {
+			return 2;
+		} else if (992 < tailleLigne && tailleLigne <= 1200) {
+			return 2.7;
+		} else if (1200 < tailleLigne && tailleLigne <= 1800) {
+			return 5;
+		} else {
+			return 7;
+		}
+	}
+	
+	function videGalerie() {
+		$('#galerie').empty();
+	}
+	
+	function rechargeImage() {
+		
+		videGalerie();
+		
+		var tailleLigne = calculTailleLigne();
+		var RatioLigne = calculRatioLigne(tailleLigne);
+		
+		var tmpRatioLigne = 0;
+		var bufferImage = [];
+		var nbImageTmp = 0;
+		var hauteurTotale = 0;
+		var nbLigne = 0;
+		
+		for (var i = 0; i < tableauImages.length; i++) {
+			var indexImg = tableauImages[i][0];
+		   var src = tableauImages[i][1];
+		   var longueur = tableauImages[i][2];
+		   var hauteur = tableauImages[i][3];
+		   var nom = tableauImages[i][4];
+		   
+		   var ratioImage = longueur/ hauteur;
+		   
+		   tmpRatioLigne = tmpRatioLigne + ratioImage;
+		   bufferImage.push(tableauImages[i]);
+		   
+		   if (tmpRatioLigne >= RatioLigne) {
+			   
+			   var longueurTotale = 0;
+			   
+			   for (var j = 0; j < bufferImage.length; j++) {
+				   longueurTotale += bufferImage[j][2];
+			   }
+			   
+			   var hauteurMax = Math.round(longueurTotale / tmpRatioLigne);
+			   
+			   var hauteurLigne = Math.round(hauteurMax * tailleLigne / longueurTotale);
+			   hauteurTotale += hauteurLigne;
+			   nbLigne += 1;
+			   
+			   for (var j = 0; j < bufferImage.length; j++) {
+				   
+				   var longueurImage = Math.round(bufferImage[j][2] * hauteurLigne / bufferImage[j][3]);
+				   
+				   var baliseImg = '<img id="img'+bufferImage[j][0]+'" src="' + bufferImage[j][1] + '=h' + hauteurLigne + '"     >';
+				   
+				   $('<div class="image" style="width:'+longueurImage+'px; height:'+hauteurLigne+'px;background-color:#DDD; margin:2px; margin-bottom:3px;" > ' + baliseImg + ' </div>').appendTo($('#galerie'));
+			   }
+			   
+			   tmpRatioLigne = 0;
+			   bufferImage = [];
+			   
+		   } 
+		   
+		}
+		
+		   var hauteurLigne = Math.round(hauteurTotale / nbLigne);
+		   
+		   
+		   for (var j = 0; j < bufferImage.length; j++) {
+			   
+			   var baliseImg = '<img id="img'+bufferImage[j][0]+'" src="' + bufferImage[j][1] + '=h' + hauteurLigne + '"     >';
+			   
+			   $('<div class="image"> ' + baliseImg + ' </div>').appendTo($('#galerie'));
+		   }
+		   
+		
+		$(".image").css("display", "inline-block");
+		$("img").css("margin-bottom", "5px");
+
+    }
+	
 	
 	    $(window).resize(function() {
 	    	rechargeImage();
 	    });
 	  
-	    function rechargeImage() {
-	    	var largeurFenetre = $(window).width();
-			var largeurGalerie = Math.round((largeurFenetre - 60) / 3) ;
-			
-			//alert($(window).width() + ' x ' + $(window).height() + ' : ' +largeurGalerie);
-			
-			$(".image").css("display", "inline");
-			
-			$("#img1").attr({src: 'https://lh3.googleusercontent.com/uOaKni06BJYBvXrvYwGwqZqRHy5HNiR8pf7vH8Aol8Nu=w'+largeurGalerie/*, alt: 'Logo de la société', width: '200px'*/});
-			
-			$("#img2").attr({src: 'https://lh3.googleusercontent.com/wsaG8rushqI0rFYTihsot4EvVflZTxry5qawpD28LUDJ=w'+largeurGalerie/*, alt: 'Logo de la société', width: '200px'*/});
-			
-			$("#img3").attr({src: 'https://lh3.googleusercontent.com/osd4QJZbJHqtP052mGaarCDYMc48_ZpeMUkjhKQIx8IH=w'+largeurGalerie/*, alt: 'Logo de la société', width: '200px'*/});
-			
-	    }
+	    
 		
 	    rechargeImage();
 	});
