@@ -1,0 +1,65 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Astro{% endblock %}
+
+{% block cssAditionnel %}
+<link rel="stylesheet" href="{{ app.request.basepath }}/styles/nuageAstro.css">
+{% endblock %}
+
+{% block content %}
+
+
+
+<article id="portfolio_article" class="row">
+
+	<div id="portfolio" class="col-lg-offset-1 col-lg-10">
+
+		<div id="carousel" id="portfolio_carousel" class="carousel slide"
+			data-ride="carousel">
+
+
+			<ol class="carousel-indicators">
+			
+				{% for photo in astro %}
+
+					<li data-target="#carousel" data-slide-to="{{ loop.index }}" class="{{photo.active}}"></li>
+
+				{% endfor %}
+				
+			</ol>
+
+			<div class="carousel-inner ">
+			
+			    {% for photo in astro %}
+
+					
+				<div class="item {{photo.active}}">
+					<img alt="{{photo.nom}}" src="images/{{photo.src}}"  />
+					<h1 class="carousel-caption">{{photo.nom}}</h1>
+				</div>
+
+				{% endfor %}
+
+
+			</div>
+			
+			<a class="left carousel-control" href="#carousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a> <a class="right carousel-control" href="#carousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+
+
+		</div>
+
+	</div>
+
+</article>
+
+
+
+
+{% endblock %}
+
+
+

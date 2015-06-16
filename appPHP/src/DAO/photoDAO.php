@@ -8,9 +8,9 @@ class PhotoDAO extends DAO
 {
 
     /**
-     * Return 4 last actu, sorted by date (most recent first).
+     * Return portfolio list, 
      *
-     * @return array A list of 4 last actu.
+     * @return array A list of images.
      */
     public function getPortfolio() {
         $sql = "SELECT * FROM t_photo WHERE photo_portfolio = TRUE";
@@ -25,6 +25,26 @@ class PhotoDAO extends DAO
             $active = '';
         }
         return $portfolio;
+    }
+    
+    /**
+     * Return astro list,
+     *
+     * @return array A list of images.
+     */
+    public function getAstro() {
+    	$sql = "SELECT * FROM t_photo WHERE photo_astro = TRUE";
+    	$result = $this->getDb()->fetchAll($sql);
+    
+    	// Convert query result to an array of domain objects
+    	$astro = array();
+    	$active = 'active';
+    	foreach ($result as $row) {
+    		$photoId = $row['photo_id'];
+    		$astro[$photoId] = $this->buildDomainObject($row, $active);
+    		$active = '';
+    	}
+    	return $astro;
     }
 
     /**

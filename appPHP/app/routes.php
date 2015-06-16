@@ -11,3 +11,9 @@ $app->get('/portfolio', function () use ($app) {
 	$portfolio = $app['dao.photo']->getPortfolio(); 
 	return $app['twig']->render('portfolio.html.twig', array('portfolio' => $portfolio));
 });
+
+// astro
+$app->get('/astro', function () use ($app) {
+	$astro = $app['dao.photo']->getAstro();
+	return $app['twig']->render('astro.html.twig', array('astro' => $astro));
+});
