@@ -13,24 +13,25 @@
 <link rel="icon" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="{{ app.request.basepath }}/styles/normalize.css">
 
 
 <link rel="stylesheet"
-	href="bower_components/bootstrap/css/bootstrap.css">
+	href="{{ app.request.basepath }}/lib/bootstrap/css/bootstrap.css">
 
 <link href='http://fonts.googleapis.com/css?family=Satisfy'
 	rel='stylesheet' type='text/css'>
 <link
 	href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700,400italic|Signika:400,600&amp;subset=latin,latin-ext'
 	rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="styles/nuage.css">
+	
+<link rel="stylesheet" href="{{ app.request.basepath }}/styles/nuage.css">
 
 
 
 
 <!--[if lt IE 9]>
-    <script src="scripts/html5shiv.js"></script>
+    <script src="lib/html5shiv.js"></script>
 <![endif]-->
 
 
@@ -225,20 +226,20 @@
 
 
 
-	<script src="scripts/vendor/modernizr-2.8.3.min.js"></script>
+	<script src="lib/vendor/modernizr-2.8.3.min.js"></script>
 	<script type="text/javascript" language="JavaScript"
-		src="scripts/jquery-2.1.4.js"></script>
+		src="{{ app.request.basepath }}/lib/jquery-2.1.4.js"></script>
 
 	<script type="text/javascript" language="JavaScript"
-		src="bower_components/bootstrap/js/bootstrap.min.js"></script>
+		src="{{ app.request.basepath }}/lib/bootstrap/js/bootstrap.min.js"></script>
 
 	<script type="text/javascript" language="JavaScript"
-		src="scripts/parallax.js"></script>
+		src="{{ app.request.basepath }}/lib/parallax.js"></script>
 	<script type="text/javascript" language="JavaScript"
-		src="scripts/jquery.event.frame.js"></script>
+		src="{{ app.request.basepath }}/lib/jquery.event.frame.js"></script>
 
 	<script type="text/javascript" language="JavaScript"
-		src="scripts/nuage.js"></script>
+		src="{{ app.request.basepath }}/scripts/nuage.js"></script>
 
 
 </body>
