@@ -10,10 +10,15 @@ ExceptionHandler::register();
 // Register service providers.
 $app->register(new Silex\Provider\DoctrineServiceProvider());
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
-    'twig.path' => __DIR__.'/../views',
+		'twig.path' => __DIR__.'/../views',
 ));
 
 // Register services.
 $app['dao.actu'] = $app->share(function ($app) {
-    return new Nuage\DAO\ActuDAO($app['db']);
+	return new Nuage\DAO\ActuDAO($app['db']);
+});
+
+// Register services.
+$app['dao.photo'] = $app->share(function ($app) {
+	return new Nuage\DAO\PhotoDAO($app['db']);
 });

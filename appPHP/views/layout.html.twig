@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>La Cartographie des Nuages  - {% block title %}{% endblock %}</title>
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="stylesheet" href="{{ app.request.basepath }}/styles/normalize.css">
+
+
+<link rel="stylesheet"
+	href="{{ app.request.basepath }}/lib/bootstrap/css/bootstrap.css">
+
+<link href='http://fonts.googleapis.com/css?family=Satisfy'
+	rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700,400italic|Signika:400,600&amp;subset=latin,latin-ext'
+	rel="stylesheet" type="text/css">
+	
+<link rel="stylesheet" href="{{ app.request.basepath }}/styles/nuage.css">
+
+
+
+
+<!--[if lt IE 9]>
+    <script src="lib/html5shiv.js"></script>
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+
+
+
+	<div id="bloc_page" class="container-fluid">
+
+		<!-- HEADER -->
+
+		<header id="banniere" class="row">
+			<!-- Titre principal -->
+			<h1 id="titre_principal" class="col-md-6">
+				<a href="index.html">La Cartographie des Nuages</a>
+			</h1>
+
+			<!-- Menu banniere -->
+			<nav id="nav_principal" class="col-md-6">
+				<ul>
+					<li><a href="/">Accueil</a></li>
+					<li><a href="/portfolio">Portefolio</a></li>
+					<li><a href="astro.html">Astro</a></li>
+					<li><a href="index.html">Vid&#xE9;os</a></li>
+					<li><a href="index.html">Voyages</a></li>
+					<li><a href="index.html">Galeries</a></li>
+				</ul>
+			</nav>
+		</header>
+
+
+		<!-- PAGE -->
+
+{% block content %}{% endblock %}
+
+
+
+		<!-- Footer -->
+
+		<footer>
+			<div class="row">
+				<nav id="liens_footer" class="col-sm-12">
+					<ul>
+						<li><a href="/">Accueil</a></li>
+						<li><a href="/portfolio">Portefolio</a></li>
+						<li><a href="astro.html">Astro</a></li>
+						<li><a href="#">Vid&#xE9;os</a></li>
+						<li><a href="#">Voyages</a></li>
+						<li><a href="#">Galeries</a></li>
+					</ul>
+				</nav>
+			</div>
+
+
+
+			<div class="row">
+				<nav id="contenu_footer" class="col-sm-12">
+					<ul>
+						<li>Tous droits r&#xE9;serv&#xE9;s</li>
+						<li><a href="#">A propos</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+
+		</footer>
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="lib/vendor/modernizr-2.8.3.min.js"></script>
+	<script type="text/javascript" language="JavaScript"
+		src="{{ app.request.basepath }}/lib/jquery-2.1.4.js"></script>
+
+	<script type="text/javascript" language="JavaScript"
+		src="{{ app.request.basepath }}/lib/bootstrap/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" language="JavaScript"
+		src="{{ app.request.basepath }}/lib/parallax.js"></script>
+	<script type="text/javascript" language="JavaScript"
+		src="{{ app.request.basepath }}/lib/jquery.event.frame.js"></script>
+
+	<script type="text/javascript" language="JavaScript"
+		src="{{ app.request.basepath }}/scripts/nuage.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Portefolio{% endblock %}
+
+{% block content %}
+
+
+<!-- Actualites -->
+
+<article id="portfolio_article" class="row">
+
+	<div id="portfolio" class="col-lg-offset-1 col-lg-10">
+
+		<div id="carousel" id="portfolio_carousel" class="carousel slide"
+			data-ride="carousel">
+
+
+			<ol class="carousel-indicators">
+				<li data-target="#carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel" data-slide-to="1"></li>
+				<li data-target="#carousel" data-slide-to="2"></li>
+				<li data-target="#carousel" data-slide-to="3"></li>
+			</ol>
+
+			<div class="carousel-inner ">
+			
+			    {% for photo in portfolio %}
+
+					
+				<div class="item {{photo.active}}">
+					<img alt="{{photo.nom}}" src="images/{{photo.src}}"  />
+					<h1 class="carousel-caption">{{photo.nom}}</h1>
+				</div>
+
+				{% endfor %}
+
+
+			</div>
+			
+			<a class="left carousel-control" href="#carousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a> <a class="right carousel-control" href="#carousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+
+
+		</div>
+
+	</div>
+
+</article>
+
+
+
+
+{% endblock %}
+
+
