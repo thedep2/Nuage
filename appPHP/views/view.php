@@ -24,7 +24,7 @@
 <link
 	href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700,400italic|Signika:400,600&amp;subset=latin,latin-ext'
 	rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="styles/app.css">
+<link rel="stylesheet" href="styles/nuage.css">
 
 
 
@@ -239,7 +239,7 @@
 <script type="text/javascript" language="JavaScript" src="scripts/parallax.js"></script>
 <script type="text/javascript" language="JavaScript" src="scripts/jquery.event.frame.js"></script>
 
-<script type="text/javascript" language="JavaScript" src="scripts/app.js"></script>
+<script type="text/javascript" language="JavaScript" src="scripts/nuage.js"></script>
 
 
 </body>
