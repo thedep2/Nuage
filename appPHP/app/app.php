@@ -13,6 +13,13 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 		'twig.path' => __DIR__.'/../views',
 ));
 
+$app->register(new Silex\Provider\MonologServiceProvider(), array(
+		'monolog.logfile' => __DIR__.'/../var/logs/nuage.log',
+		'monolog.name' => 'Nuage',
+		'monolog.level' => $app['monolog.level']
+));
+
+
 // Register services.
 $app['dao.actu'] = $app->share(function ($app) {
 	return new Nuage\DAO\ActuDAO($app['db']);
@@ -21,4 +28,19 @@ $app['dao.actu'] = $app->share(function ($app) {
 // Register services.
 $app['dao.photo'] = $app->share(function ($app) {
 	return new Nuage\DAO\PhotoDAO($app['db']);
+});
+
+// Register error handler
+$app->error(function (\Exception $e, $code) use ($app) {
+		switch ($code) {
+			case 403:
+				$message = 'Access denied.';
+				break;
+			case 404:
+				$message = 'The requested resource could not be found.';
+				break;
+			default:
+				$message = "Something went wrong.";
+		}
+		return $app['twig']->render('error.html.twig', array('message' => $message));
 });
