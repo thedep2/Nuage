@@ -38,6 +38,13 @@ class Actu
      * @var boolean
      */
     private $astro;
+    
+    /**
+     * offset.
+     *
+     * @var integer
+     */
+    private $offset;
 
 
     public function getId() {
@@ -82,6 +89,15 @@ class Actu
     
     public function setAstro($astro) {
     	$this->astro = $astro;
+    }
+    
+    
+    public function getOffset() {
+    	return $this->offset;
+    }
+    
+    public function setOffset($offset) {
+    	$this->offset = $offset;
     }
 
     
