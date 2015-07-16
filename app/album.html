@@ -25,7 +25,7 @@
 	rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="styles/app.css">
 
-	<link href="js/lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
+<link href="js/lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
 
 
 
@@ -47,32 +47,38 @@
 	<script type="text/javascript" language="JavaScript" src="scripts/jquery-2.1.4.js"></script>
 
 	<script type="text/javascript" language="JavaScript" src="bower_components/bootstrap/js/bootstrap.min.js"></script>
-	<script src="js/lightbox2-master/dist/js/lightbox.js"></script>
+<script src="js/lightbox2-master/dist/js/lightbox.js"></script>
+
+<script>
+    lightbox.option({
+      'positionFromTop': 25,
+    })
+</script>
 
 	<script>
 	jQuery(document).ready(function() {
 
 		var tableauImages = [
-			[1, 'https://lh3.googleusercontent.com/uOaKni06BJYBvXrvYwGwqZqRHy5HNiR8pf7vH8Aol8Nu', 2048, 1516, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[2, 'https://lh3.googleusercontent.com/wsaG8rushqI0rFYTihsot4EvVflZTxry5qawpD28LUDJ', 2048, 1536, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[3, 'https://lh3.googleusercontent.com/osd4QJZbJHqtP052mGaarCDYMc48_ZpeMUkjhKQIx8IH', 2048, 1536, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[4, 'https://lh3.googleusercontent.com/o4vTXdi0bbLkP5LRGRWIZ337kSgF2IjgvxTZ4q76qFHM', 2048, 1153, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[5, 'https://lh3.googleusercontent.com/NG1ftWY22s5T1wBq5N33qzKib529Q_NgNzU2MFiF0EmV', 2048, 1516, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[6, 'https://lh3.googleusercontent.com/OUzNnDZSH3nWIMMilr-OMcFIuAm4z-I8xEDfechjZFvr', 1516, 2048, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[7, 'https://lh3.googleusercontent.com/JCYgYeraAazmkWXc-iBUCRhMSCWbLsV4vTqjbnndjm5A', 2048, 1516, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[8, 'https://lh3.googleusercontent.com/xoM97fUB2noS-tgKtdWfZbZKRLPn-IIInBXAx8suAbKy', 2048, 1152, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[9, 'https://lh3.googleusercontent.com/40ufepG5sl0TnbRb17mC8EuPlbmOZyd6BounQDcQFmrc', 2048, 1357, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[10, 'https://lh3.googleusercontent.com/Kra42zy8FNq7HATIzQ48qmF3n8yKD5MRWb2zsqqvPeVE', 2048, 895, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[11, 'https://lh3.googleusercontent.com/k5AJL9aoqBHhl3JyYDUdr2eMO3Zi_zFtmTazBCLozCqo', 2048, 1357, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[12, 'https://lh3.googleusercontent.com/hpaxfyR8xcRonTfg59DsvzlQBtiWK-sG00ss35yBwP2s', 2048, 814, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[13, 'https://lh3.googleusercontent.com/bCjl78HkK_hXp2WA_Nu_gaGqDCRCD7t9_4T2yvJQo4L_', 2048, 1357, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[14, 'https://lh3.googleusercontent.com/3IFyetectmkzAsAqe3SRxrSf_H3Pz4WaKdo5MVMq6HWe', 1536, 2048, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[15, 'https://lh3.googleusercontent.com/mzTaHwz6msRIcSToB0GvEMrHaS2nO1WIV6lf8CkdK9vR', 2048, 1516, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[16, 'https://lh3.googleusercontent.com/MU_KSiBlN8liPvb1o_JmAnzrCK7AfkG06F0V0xfRctg_', 1516, 2048, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[17, 'https://lh3.googleusercontent.com/uXcf6h3dNRLZ9mXRmXxavmfsNEwCqSmDyQZ0xwAhk_4w', 2048, 1152, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[18, 'https://lh3.googleusercontent.com/vafh96WmKkjvWPJ6cThIRFr1ERxfpGMtsw9ZTvya_6A_', 2048, 1357, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[19, 'https://lh3.googleusercontent.com/kTFAyceeWzg6DHlDcDjmZ8Mb91FewYYjWAOJQ-Ir6USB', 2048, 1152, 'Ciao Marseille', '2015-07-01', '16', '11'],
-			[20, 'https://lh3.googleusercontent.com/GNMB1JIjIjfrcCZFNZKIeCX4_cjXpr01ZGqecNgCiaaS', 2048, 1357, 'Ciao Marseille', '2015-07-01', '16', '11']
+			[1, 'https://lh3.googleusercontent.com/uOaKni06BJYBvXrvYwGwqZqRHy5HNiR8pf7vH8Aol8Nu', 2048, 1516, 'Ciao Marseille'],
+			[2, 'https://lh3.googleusercontent.com/wsaG8rushqI0rFYTihsot4EvVflZTxry5qawpD28LUDJ', 2048, 1536, 'Ciao Marseille'],
+			[3, 'https://lh3.googleusercontent.com/osd4QJZbJHqtP052mGaarCDYMc48_ZpeMUkjhKQIx8IH', 2048, 1536, 'Ciao Marseille'],
+			[4, 'https://lh3.googleusercontent.com/o4vTXdi0bbLkP5LRGRWIZ337kSgF2IjgvxTZ4q76qFHM', 2048, 1153, 'Ciao Marseille'],
+			[5, 'https://lh3.googleusercontent.com/NG1ftWY22s5T1wBq5N33qzKib529Q_NgNzU2MFiF0EmV', 2048, 1516, 'Ciao Marseille'],
+			[6, 'https://lh3.googleusercontent.com/OUzNnDZSH3nWIMMilr-OMcFIuAm4z-I8xEDfechjZFvr', 1516, 2048, 'Ciao Marseille'],
+			[7, 'https://lh3.googleusercontent.com/JCYgYeraAazmkWXc-iBUCRhMSCWbLsV4vTqjbnndjm5A', 2048, 1516, 'Ciao Marseille'],
+			[8, 'https://lh3.googleusercontent.com/xoM97fUB2noS-tgKtdWfZbZKRLPn-IIInBXAx8suAbKy', 2048, 1152, 'Ciao Marseille'],
+			[9, 'https://lh3.googleusercontent.com/40ufepG5sl0TnbRb17mC8EuPlbmOZyd6BounQDcQFmrc', 2048, 1357, 'Ciao Marseille'],
+			[10, 'https://lh3.googleusercontent.com/Kra42zy8FNq7HATIzQ48qmF3n8yKD5MRWb2zsqqvPeVE', 2048, 895, 'Ciao Marseille'],
+			[11, 'https://lh3.googleusercontent.com/k5AJL9aoqBHhl3JyYDUdr2eMO3Zi_zFtmTazBCLozCqo', 2048, 1357, 'Ciao Marseille'],
+			[12, 'https://lh3.googleusercontent.com/hpaxfyR8xcRonTfg59DsvzlQBtiWK-sG00ss35yBwP2s', 2048, 814, 'Ciao Marseille'],
+			[13, 'https://lh3.googleusercontent.com/bCjl78HkK_hXp2WA_Nu_gaGqDCRCD7t9_4T2yvJQo4L_', 2048, 1357, 'Ciao Marseille'],
+			[14, 'https://lh3.googleusercontent.com/3IFyetectmkzAsAqe3SRxrSf_H3Pz4WaKdo5MVMq6HWe', 1536, 2048, 'Ciao Marseille'],
+			[15, 'https://lh3.googleusercontent.com/mzTaHwz6msRIcSToB0GvEMrHaS2nO1WIV6lf8CkdK9vR', 2048, 1516, 'Ciao Marseille'],
+			[16, 'https://lh3.googleusercontent.com/MU_KSiBlN8liPvb1o_JmAnzrCK7AfkG06F0V0xfRctg_', 1516, 2048, 'Ciao Marseille'],
+			[17, 'https://lh3.googleusercontent.com/uXcf6h3dNRLZ9mXRmXxavmfsNEwCqSmDyQZ0xwAhk_4w', 2048, 1152, 'Ciao Marseille'],
+			[18, 'https://lh3.googleusercontent.com/vafh96WmKkjvWPJ6cThIRFr1ERxfpGMtsw9ZTvya_6A_', 2048, 1357, 'Ciao Marseille'],
+			[19, 'https://lh3.googleusercontent.com/kTFAyceeWzg6DHlDcDjmZ8Mb91FewYYjWAOJQ-Ir6USB', 2048, 1152, 'Ciao Marseille'],
+			[20, 'https://lh3.googleusercontent.com/GNMB1JIjIjfrcCZFNZKIeCX4_cjXpr01ZGqecNgCiaaS', 2048, 1357, 'Ciao Marseille']
 
 		];
 
